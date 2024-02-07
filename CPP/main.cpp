@@ -22,6 +22,7 @@ int main(){
         cout << "1. Tambah data" << endl;
         cout << "2. Ubah data" << endl;
         cout << "3. Hapus data" << endl;
+        cout << "4. Keluar aplikasi" << endl;
         cout << "=====================" << endl;
         cout << "Input disini : " << endl;
         int menu = 0;
@@ -35,11 +36,11 @@ int main(){
                     Human temp;
                     cout << "Input ID : ";
                     cin >> id;
-                    cout << endl << "Input Nama : ";
+                    cout << "Input Nama : ";
                     cin >> nama;
-                    cout << endl << "Input Nama Bidang : ";
+                    cout << "Input Nama Bidang : ";
                     cin >> namaBidang;
-                    cout << endl << "Input Nama Partai : ";
+                    cout << "Input Nama Partai : ";
                     cin >> namaPartai;
                     temp.set_id(id);
                     temp.set_nama(nama);
@@ -54,14 +55,14 @@ int main(){
                     cout << "Masukkan ID dari data yang akan diubah: ";
                     cin >> id;
                     cout << endl;
-                    int i = 0, found = 0;
+                    int i = 0, found = -1;
                     for(vector<Human>::iterator it = DPR.begin(); it != DPR.end();it++){
                         if(it->get_id() == id){
-                            found = it->get_id();
+                            found = i;
                         }
                         i++;
                     }
-                    if(found == 0){
+                    if(found == -1){
                         cout << "ID tidak ada!" << endl;
                         system("pause");
                     }
@@ -92,22 +93,33 @@ int main(){
                     cout << "Masukkan ID dari data yang akan dihapus: ";
                     cin >> id;
                     cout << endl;
-                    int i = 0, found = 0;
+                    int i = 0, found = -1;
+                    vector<Human>::iterator deleted = DPR.begin();
                     for(vector<Human>::iterator it = DPR.begin();it != DPR.end();it++){
                         if(it->get_id() == id){
-                            DPR.erase(it);
-                            found = it->get_id();
+                            deleted = it;
+                            found = i;
                         }
                         i++;
                     }
-                    if(found == 0){
+                    if(found == -1){
                         cout << "ID tidak ada!" << endl;
                         system("pause");
                     }
+                    else{
+                        DPR.erase(deleted);
+                    }
                     break;
                 }
+            case 4:
+                {
+                    stop = 1;
+                }
+                break;
             default:
-
+                {
+                    cout << "Invalid input!\n";
+                }
             break;
         }
     }
