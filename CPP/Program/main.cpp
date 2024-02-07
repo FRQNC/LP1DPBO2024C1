@@ -1,3 +1,5 @@
+/*Saya Muhamad Furqon Al-Haqqi NIM 2207207 mengerjakan LP1 dalam mata kuliah DPBO
+untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.*/
 #include <bits/stdc++.h>
 
 #include "Human.cpp"
@@ -24,7 +26,7 @@ int main(){
         cout << "3. Hapus data" << endl;
         cout << "4. Keluar aplikasi" << endl;
         cout << "=====================" << endl;
-        cout << "Input disini : " << endl;
+        cout << "Input disini : ";
         int menu = 0;
         cin >> menu;
         system("cls");
