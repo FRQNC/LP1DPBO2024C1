@@ -2,17 +2,17 @@
 untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.*/
 #include <bits/stdc++.h>
 
-#include "Human.cpp"
+#include "AnggotaDPR.cpp"
 
 using namespace std;
 
 int main(){
     int stop = 0;
-    vector<Human> DPR;
+    vector<AnggotaDPR> DPR;
     while(!stop){
         system("cls");
         cout << "Daftar Anggota DPR" << endl;
-        for(vector<Human>::iterator it = DPR.begin(); it != DPR.end();it++){
+        for(vector<AnggotaDPR>::iterator it = DPR.begin(); it != DPR.end();it++){
             cout << "---------------------------------------------------" << endl;
             cout << "ID : " << it->get_id() << endl;
             cout << "Nama : " << it->get_nama() << endl;
@@ -35,7 +35,7 @@ int main(){
                 {
                     int id;
                     string nama, namaBidang, namaPartai;
-                    Human temp;
+                    AnggotaDPR temp;
                     cout << "Input ID : ";
                     cin >> id;
                     cout << "Input Nama : ";
@@ -58,7 +58,7 @@ int main(){
                     cin >> id;
                     cout << endl;
                     int i = 0, found = -1;
-                    for(vector<Human>::iterator it = DPR.begin(); it != DPR.end();it++){
+                    for(vector<AnggotaDPR>::iterator it = DPR.begin(); it != DPR.end();it++){
                         if(it->get_id() == id){
                             found = i;
                         }
@@ -69,7 +69,7 @@ int main(){
                         system("pause");
                     }
                     else{
-                        Human current = DPR[found];
+                        AnggotaDPR current = DPR[found];
                         string nama, namaBidang, namaPartai;
                         cout << "---------------------------------------------------" << endl;
                         cout << "ID : " << current.get_id()<<endl;
@@ -96,8 +96,8 @@ int main(){
                     cin >> id;
                     cout << endl;
                     int i = 0, found = -1;
-                    vector<Human>::iterator deleted = DPR.begin();
-                    for(vector<Human>::iterator it = DPR.begin();it != DPR.end();it++){
+                    vector<AnggotaDPR>::iterator deleted = DPR.begin();
+                    for(vector<AnggotaDPR>::iterator it = DPR.begin();it != DPR.end();it++){
                         if(it->get_id() == id){
                             deleted = it;
                             found = i;

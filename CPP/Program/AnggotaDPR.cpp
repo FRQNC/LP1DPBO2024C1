@@ -2,19 +2,19 @@
 #include <string>
 using namespace std;
 
-class Human{
+class AnggotaDPR{
     private:
         int id;
         string nama, namaBidang, namaPartai;
     public:
 
-    Human(){
+    AnggotaDPR(){
         this->id = -1;
         this->nama = "";
         this->namaBidang = "";
         this->namaPartai = "";
     }
-    Human(int id, string nama, string namaBidang, string namaPartai){
+    AnggotaDPR(int id, string nama, string namaBidang, string namaPartai){
         this->id = id;
         this->nama = nama;
         this->namaBidang = namaBidang;
@@ -45,7 +45,7 @@ class Human{
     void set_namaPartai(string namaPartai){
         this->namaPartai = namaPartai;
     }
-    ~Human(){
+    ~AnggotaDPR(){
         
     }
 };
