@@ -1,3 +1,5 @@
+/*Saya Muhamad Furqon Al-Haqqi NIM 2207207 mengerjakan LP1 dalam mata kuliah DPBO
+untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.*/
 <?php
     require("AnggotaDPR.php");
 
